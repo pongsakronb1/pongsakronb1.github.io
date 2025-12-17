@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio ส่วนตัว — ชื่อของคุณ: ผู้พัฒนา, นักออกแบบ, ฯลฯ" />
+  <link rel="stylesheet" href="Port.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<section id="projects" class="reveal">
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+
+      reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+
+        if (rect.top < windowHeight - 200 && rect.bottom > 200) {
+          el.classList.add("active");
+        } else {
+          el.classList.remove("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+  </script>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div class="logo">Best</div>
+          <div>
+            <h1>Pongsakron Learprasert</h1>
+            <div style="color:var(--muted);font-size:0.9rem">lntern</div>
+          </div>
+        </div>
+        <nav>
+          <a href="#contact" class="cta">ติดต่อ</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="card intro">
+            <h2>สวัสดีครับ — ผม นาย พงศกร เหลือประเสริฐ</h2>
+            <p>ผมชื่อพงศกรผมสนใจการเขียนโปรแกรมเป็นอย่างมากผมได้ศึกษาด้วยตัวเองและที่มหาวิทยาลัยจึงได้สร้างเว็บนี้ขึ้นมา
+            </p>
+            <div class="actions">
+            </div>
+            <br>
+            <a class="btn primary" href="me.pdf" target="_blank">Resume</a>
+
+            <section id="about" style="margin-top:20px">
+              <div style="display:flex;gap:14px;align-items:center">
+                <div style="flex:1">
+                  <br>
+                  <h3>เกี่ยวกับผม</h3>
+                  <p style="color:var(--muted)">ตลอดปีการศึกษา ผมได้รับประสบการณ์การเขียนโปรแกรมหลากหลายภาษาเช่น C# Java
+                    HTML&CSS php รวมถึงการการนำเข้าข้อมูลDatabase</p>
+                </div>
+                <div style="width:120px;text-align:center;color:var(--muted)">
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <aside class="photo card">
+            <div class="avatar">
+
+              <img src="me.jpg" alt="Avatar">
+            </div>
+          </aside>
+        </section>
+        <br><br><br><br>
+        <section id="projects">
+          <h2 style="margin:0 0 12px 0">ผลงาน</h2>
+          <div class="grid-3">
+            <article class="project">
+              <h3>UX/UIร้านขายหนังสือ</h3>
+              <a class="btn"
+                href="https://www.figma.com/design/MtX2lqWOPnLeYW0yCuPwki/Untitled?node-id=0-1&t=u48CvnRALfh2WgWZ-1"
+                target="_blan">กดดูผลงาน</a>
+              <div class="tags"><span class="tag">Figma</span></div>
+            </article>
+
+            <article class="project">
+              <h3>เว็บขายหนังสือ</h3>
+              <a class="btn" href="https://www.comsci-rmutp.com/2568gp21/" target="_blank">กดดูผลงาน</a>
+              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">php</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section style="margin-top:20px">
+          <h2 style="margin:0 0 12px 0">ทักษะ</h2>
+          <div class="skills">
+            <div class="skill card">
+              <strong>HTML &amp; CSS</strong>
+              <div style="color:var(--muted);margin-top:8px;font-size:0.9rem">Responsive, Accessibility</div>
+            </div>
+
+            <div class="skill card">
+              <strong>Database</strong>
+              <div style="color:var(--muted);margin-top:8px;font-size:0.9rem">จำเก็บข้อมูลเข้าDatebaseและนำข้อมูลไปใช้
+              </div>
+            </div>
+
+            <div class="skill card">
+              <strong>php</strong>
+              <div style="color:var(--muted);margin-top:8px;font-size:0.9rem">ขึ้นเซิฟเวอร์Firebase</div>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="contact" style="margin-top:20px">
+          <h2 style="margin:0 0 12px 0">ติดต่อ</h2>
+          <div class="contact-grid">
+            <div class="card">
+              <div style="display:flex;gap:10px;flex-wrap:wrap">
+                <div style="flex:1;min-width:130px">
+                  <strong>อีเมล</strong>
+                  <div style="color:var(--muted);margin-top:6px">PONGSAKRON-L@rmutp.ac.th</div>
+                </div>
+                <div style="flex:1;min-width:130px">
+                  <strong>เบอร์โทร</strong>
+                  <div style="color:var(--muted);margin-top:6px">096-725-1562</div>
+                </div>
+              </div>
+              <br>
+              <nav>
+                <a href="https://www.facebook.com/pongsakron.learprasert" class="brr" target="_blank"><i
+                    class="fa-brands fa-facebook"></i> facebook</a>
+                <a href="https://www.instagram.com/bpsk._/" class="brr" target="_blank"><i
+                    class="fa-brands fa-instagram"></i> instagram</a>
+                <a href="https://line.me/ti/p/KKBs0hsZh8" class="brr" target="_blank"><i class="fa-brands fa-line"></i>
+                  Line</a>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=PONGSAKRON-L@rmutp.ac.th&tf=cm" class="brr"
+                  target="_blank"><i class="fa-solid fa-envelope"></i> Gmail</a>
+              </nav>
+        </section>
+      </main>
+    </div>
+    <script>
+      (function setYear() {
+        const f = document.querySelector('footer');
+        if (f) f.innerHTML = '© ' + new Date().getFullYear() + ' พงศกร เหลือประเสริฐ';
+      })();
+    </script>
+  </body>
+
+</html>
